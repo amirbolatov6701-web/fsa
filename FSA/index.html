@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Future Skills Academy (FSA) — волонтёрский образовательный проект для школьников и студентов. Программирование, робототехника, языки, digital-навыки." />
+  <meta name="keywords" content="FSA, Future Skills Academy, образование, волонтёры, программирование, робототехника, онлайн обучение Казахстан" />
+  <meta property="og:title" content="Future Skills Academy (FSA)" />
+  <meta property="og:description" content="Волонтёрский образовательный проект для школьников и студентов" />
+  <meta property="og:type" content="website" />
+  <title>Future Skills Academy (FSA)</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── LOADER ─── -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img src="logo.png" alt="FSA" class="loader-logo-img"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+      <div class="loader-logo-fallback">FSA</div>
+      <p class="loader-text">Future Skills Academy</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ─── NAVBAR ─── -->
+  <header class="navbar" role="banner">
+    <nav class="nav-wrap" aria-label="Основная навигация">
+
+      <a href="#hero" class="nav-logo" aria-label="FSA — на главную">
+        <div class="logo-box">
+          <img src="logo.png" alt="FSA Logo"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="logo-box-fallback">FSA</div>
+        </div>
+        <span class="nav-brand">Future Skills Academy</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about"      class="nav-link">О нас</a></li>
+        <li><a href="#courses"    class="nav-link">Курсы</a></li>
+        <li><a href="#students"   class="nav-link">Ученикам</a></li>
+        <li><a href="#volunteers" class="nav-link">Волонтёрам</a></li>
+        <li><a href="#partners"   class="nav-link">Партнёры</a></li>
+        <li><a href="#contact"    class="nav-link">Контакты</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#students" class="btn btn-ghost btn-sm">Записаться</a>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mob-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mob-menu" aria-hidden="true">
+      <ul class="mobile-links" role="list">
+        <li><a href="#about"        class="mobile-link">О нас</a></li>
+        <li><a href="#courses"      class="mobile-link">Курсы</a></li>
+        <li><a href="#students"     class="mobile-link">Ученикам</a></li>
+        <li><a href="#volunteers"   class="mobile-link">Волонтёрам</a></li>
+        <li><a href="#partners"     class="mobile-link">Партнёры</a></li>
+        <li><a href="#certificates" class="mobile-link">Сертификаты</a></li>
+        <li><a href="#contact"      class="mobile-link">Контакты</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <a href="#students"   class="btn btn-primary btn-full">Стать учеником</a>
+        <a href="#volunteers" class="btn btn-outline btn-full">Стать волонтёром</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════ HERO ═══ -->
+    <section id="hero" class="hero" aria-label="Главная страница">
+      <div class="hero-bg">
+        <canvas id="particles-canvas" aria-hidden="true"></canvas>
+        <div class="blob blob-1" aria-hidden="true"></div>
+        <div class="blob blob-2" aria-hidden="true"></div>
+        <div class="blob blob-3" aria-hidden="true"></div>
+        <div class="grid-lines" aria-hidden="true"></div>
+      </div>
+
+      <!-- Decorative shapes -->
+      <div class="deco deco-1" aria-hidden="true">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="30" stroke="rgba(91,127,239,0.25)" stroke-width="1.5"/>
+          <circle cx="32" cy="32" r="18" stroke="rgba(91,127,239,0.12)" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="deco deco-2" aria-hidden="true">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <rect x="3" y="3" width="42" height="42" rx="10" stroke="rgba(122,181,245,0.25)" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="deco deco-3" aria-hidden="true">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <polygon points="26,3 49,49 3,49" stroke="rgba(61,90,224,0.2)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+
+        <!-- Logo ring -->
+        <div data-aos="zoom-in" data-aos-duration="700">
+          <div class="hero-logo-ring">
+            <img src="logo.png" alt="FSA Logo" class="hero-logo-img"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="hero-logo-fallback">FSA</div>
+          </div>
+        </div>
+
+        <!-- Pill badge -->
+        <div class="hero-pill" data-aos="fade-down" data-aos-delay="100">
+          <span class="pill-dot"></span>
+          Волонтёрский образовательный проект
+        </div>
+
+        <!-- Title -->
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="180">
+          <span class="gt">Future Skills</span>
+          <span class="gt">Academy</span>
+          <span class="line-2">— FSA —</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="300">
+          Бесплатное обучение программированию, робототехнике и языкам
+          для школьников и студентов — из любой точки страны.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="420">
+          <a href="#students" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Стать учеником
+          </a>
+          <a href="#volunteers" class="btn btn-outline btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Стать волонтёром
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-scroll" aria-label="Листать вниз">
+        <div class="scroll-ring"><div class="scroll-ball"></div></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ ABOUT ═══ -->
+    <section id="about" class="about section" aria-label="О нас">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="s-tag">Кто мы</span>
+          <h2 class="s-title">О <span class="gt">Future Skills Academy</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div data-aos="fade-right" data-aos-delay="100">
+            <p class="about-lead">
+              Future Skills Academy (FSA) — это волонтёрский образовательный проект, созданный для школьников и студентов.
+            </p>
+            <p>
+              Наша цель — сделать современные навыки доступными каждому, независимо от города, школы или возможностей. Мы обучаем тому, что действительно пригодится в будущем: программированию, робототехнике, языкам и digital-навыкам.
+            </p>
+            <p>
+              FSA — это не просто онлайн-уроки. Это сообщество ребят, которые хотят развиваться, создавать идеи и менять своё будущее уже сейчас.
+            </p>
+            <p class="about-quote">
+              "Мы верим, что талант есть везде — важно лишь дать человеку шанс раскрыть его."
+            </p>
+            <div class="about-actions">
+              <a href="#courses" class="btn btn-primary">Смотреть курсы</a>
+              <a href="#contact" class="btn btn-ghost">Связаться с нами</a>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" data-aos-delay="200">
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="ic-icon">🎓</div>
+                <h4>Бесплатно</h4>
+                <p>Все курсы FSA абсолютно бесплатны для учеников</p>
+              </div>
+              <div class="info-card">
+                <div class="ic-icon">🌐</div>
+                <h4>Онлайн</h4>
+                <p>Занятия из любой точки страны</p>
+              </div>
+              <div class="info-card">
+                <div class="ic-icon">🤝</div>
+                <h4>Комьюнити</h4>
+                <p>Живое сообщество единомышленников</p>
+              </div>
+              <div class="info-card">
+                <div class="ic-icon">🚀</div>
+                <h4>Практика</h4>
+                <p>Реальные проекты с первых уроков</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ COURSES ═══ -->
+    <section id="courses" class="courses section" aria-label="Курсы">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="s-tag">Направления</span>
+          <h2 class="s-title">Наши <span class="gt">Курсы</span></h2>
+          <p class="s-sub">Выбери своё направление и начни учиться уже сегодня — совершенно бесплатно</p>
+        </div>
+
+        <div class="courses-grid">
+
+          <!-- Robotics -->
+          <div class="course-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="cc-color" style="--cc:#f59e0b;"></div>
+            <div class="cc-icon-wrap">
+              <svg class="cc-icon" viewBox="0 0 64 64" fill="none">
+                <rect x="6" y="18" width="52" height="36" rx="7" fill="rgba(245,158,11,0.1)" stroke="#f59e0b" stroke-width="1.8"/>
+                <rect x="18" y="6" width="28" height="14" rx="5" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.8"/>
+                <circle cx="32" cy="36" r="9" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.8"/>
+                <line x1="27" y1="36" x2="37" y2="36" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                <line x1="32" y1="31" x2="32" y2="41" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3 class="cc-title">Робототехника</h3>
+              <p class="cc-desc">Создавай роботов с нуля — электроника, микроконтроллеры Arduino, от базовых схем до умных устройств.</p>
+              <div class="cc-tags"><span class="tag">Arduino</span><span class="tag">Electronics</span></div>
+            </div>
+            <div class="cc-foot">
+              <span class="cc-level">Начальный</span>
+              <a href="#contact" class="btn-cc">Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <!-- HTML -->
+          <div class="course-card" data-aos="fade-up" data-aos-delay="70">
+            <div class="cc-color" style="--cc:#ef4444;"></div>
+            <div class="cc-icon-wrap">
+              <svg class="cc-icon" viewBox="0 0 64 64" fill="none">
+                <text x="4" y="46" font-size="38" font-family="monospace" fill="#ef4444" font-weight="800">&lt;/&gt;</text>
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3 class="cc-title">HTML</h3>
+              <p class="cc-desc">Основа каждого сайта. Структура, семантика, теги — умение создавать качественные веб-страницы.</p>
+              <div class="cc-tags"><span class="tag">Web</span><span class="tag">Basics</span></div>
+            </div>
+            <div class="cc-foot">
+              <span class="cc-level">Начальный</span>
+              <a href="#contact" class="btn-cc">Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <!-- CSS -->
+          <div class="course-card" data-aos="fade-up" data-aos-delay="140">
+            <div class="cc-color" style="--cc:#3b82f6;"></div>
+            <div class="cc-icon-wrap">
+              <svg class="cc-icon" viewBox="0 0 64 64" fill="none">
+                <rect x="6" y="6" width="26" height="26" rx="5" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="1.8"/>
+                <rect x="22" y="22" width="26" height="26" rx="5" fill="rgba(59,130,246,0.18)" stroke="#3b82f6" stroke-width="1.8"/>
+                <circle cx="35" cy="22" r="5" fill="#3b82f6"/>
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3 class="cc-title">CSS</h3>
+              <p class="cc-desc">Flexbox, Grid, анимации, адаптивный дизайн — превращай HTML в современные красивые интерфейсы.</p>
+              <div class="cc-tags"><span class="tag">Design</span><span class="tag">Animations</span></div>
+            </div>
+            <div class="cc-foot">
+              <span class="cc-level">Начальный</span>
+              <a href="#contact" class="btn-cc">Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="course-card" data-aos="fade-up" data-aos-delay="210">
+            <div class="cc-color" style="--cc:#eab308;"></div>
+            <div class="cc-icon-wrap">
+              <svg class="cc-icon" viewBox="0 0 64 64" fill="none">
+                <rect x="4" y="4" width="56" height="56" rx="10" fill="rgba(234,179,8,0.1)" stroke="#eab308" stroke-width="1.8"/>
+                <text x="13" y="44" font-size="30" font-family="monospace" fill="#eab308" font-weight="800">JS</text>
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3 class="cc-title">JavaScript</h3>
+              <p class="cc-desc">Оживляй сайты: переменные, функции, DOM, события, fetch API — основы современного фронтенда.</p>
+              <div class="cc-tags"><span class="tag">Frontend</span><span class="tag">Logic</span></div>
+            </div>
+            <div class="cc-foot">
+              <span class="cc-level">Средний</span>
+              <a href="#contact" class="btn-cc">Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="course-card" data-aos="fade-up" data-aos-delay="280">
+            <div class="cc-color" style="--cc:#22c55e;"></div>
+            <div class="cc-icon-wrap">
+              <svg class="cc-icon" viewBox="0 0 64 64" fill="none">
+                <path d="M32 8c-12 0-18 5-18 12v8h18v3H14s-8 0-8 12 6 13 14 13h4v-8c0-7 5-11 12-11h12c6 0 10-4 10-10V20c0-7-6-12-14-12H32z" fill="rgba(34,197,94,0.1)" stroke="#22c55e" stroke-width="1.8"/>
+                <circle cx="25" cy="18" r="2.5" fill="#22c55e"/>
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3 class="cc-title">Python</h3>
+              <p class="cc-desc">Синтаксис, ООП, работа с данными, автоматизация — самый востребованный язык для Data Science и бэкенда.</p>
+              <div class="cc-tags"><span class="tag">Backend</span><span class="tag">Data</span></div>
+            </div>
+            <div class="cc-foot">
+              <span class="cc-level">Начальный</span>
+              <a href="#contact" class="btn-cc">Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <!-- English -->
+          <div class="course-card" data-aos="fade-up" data-aos-delay="350">
+            <div class="cc-color" style="--cc:#5b7fef;"></div>
+            <div class="cc-icon-wrap">
+              <svg class="cc-icon" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="26" fill="rgba(91,127,239,0.1)" stroke="#5b7fef" stroke-width="1.8"/>
+                <text x="14" y="42" font-size="24" font-family="Georgia, serif" fill="#5b7fef" font-weight="700">EN</text>
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3 class="cc-title">Английский язык</h3>
+              <p class="cc-desc">Грамматика, разговорная практика, IT-словарь и деловое общение — английский для карьеры в технологиях.</p>
+              <div class="cc-tags"><span class="tag">Language</span><span class="tag">IT English</span></div>
+            </div>
+            <div class="cc-foot">
+              <span class="cc-level">Все уровни</span>
+              <a href="#contact" class="btn-cc">Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+          <!-- Korean -->
+          <div class="course-card" data-aos="fade-up" data-aos-delay="420">
+            <div class="cc-color" style="--cc:#a78bfa;"></div>
+            <div class="cc-icon-wrap">
+              <svg class="cc-icon" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="26" fill="rgba(167,139,250,0.1)" stroke="#a78bfa" stroke-width="1.8"/>
+                <text x="10" y="44" font-size="22" font-family="serif" fill="#a78bfa" font-weight="700">한국어</text>
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3 class="cc-title">Корейский язык</h3>
+              <p class="cc-desc">Хангыль, базовая грамматика, разговорные фразы — открой мир корейской культуры и технологий.</p>
+              <div class="cc-tags"><span class="tag">Language</span><span class="tag">Korean</span></div>
+            </div>
+            <div class="cc-foot">
+              <span class="cc-level">Начальный</span>
+              <a href="#contact" class="btn-cc">Подробнее <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="s-cta" data-aos="fade-up">
+          <a href="#contact" class="btn btn-primary btn-lg">Записаться на курс</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ STUDENTS ═══ -->
+    <section id="students" class="students section" aria-label="Для учеников">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="s-tag">Ученикам</span>
+          <h2 class="s-title">Почему учиться <span class="gt">в FSA</span></h2>
+          <p class="s-sub">Всё необходимое для роста — собрано в одном месте</p>
+        </div>
+
+        <div class="sf-grid">
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="sf-icon si-green">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div class="sf-text">
+              <h3>Бесплатное обучение</h3>
+              <p>Никаких платежей. Все курсы FSA абсолютно бесплатны — потому что знания должны быть доступны каждому.</p>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="sf-icon si-blue">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div class="sf-text">
+              <h3>Онлайн занятия</h3>
+              <p>Учись откуда угодно — из любого города или страны. Нужен только интернет и желание развиваться.</p>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="sf-icon si-lblue">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="sf-text">
+              <h3>Практические проекты</h3>
+              <p>С первого урока — реальные задачи. Ты строишь портфолио пока учишься, а не после.</p>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="sf-icon si-sky">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="sf-text">
+              <h3>Живое комьюнити</h3>
+              <p>Сотни ребят, которые развиваются вместе. Общение, поддержка, совместные проекты и новые друзья.</p>
+            </div>
+          </div>
+
+          <div class="sf-card" data-aos="fade-up" data-aos-delay="320">
+            <div class="sf-icon si-indigo">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+            </div>
+            <div class="sf-text">
+              <h3>Сертификат об окончании</h3>
+              <p>По завершению курса ты получаешь официальный сертификат FSA — подтверждение знаний для резюме и портфолио.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cta-band" data-aos="fade-up" data-aos-delay="400">
+          <div class="cta-band-text">
+            <h3>Готов начать своё путешествие?</h3>
+            <p>Присоединяйся к команде FSA и начни учиться уже сегодня</p>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Присоединиться как ученик
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ VOLUNTEERS ═══ -->
+    <section id="volunteers" class="volunteers section" aria-label="Для волонтёров">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="s-tag">Волонтёрам</span>
+          <h2 class="s-title">Стань частью <span class="gt">команды FSA</span></h2>
+          <p class="s-sub">Делись знаниями, развивайся сам и меняй жизни других</p>
+        </div>
+
+        <div class="vol-layout">
+
+          <!-- Timeline -->
+          <div data-aos="fade-right" data-aos-delay="100">
+
+            <div class="tl-item">
+              <div class="tl-marker"><div class="tl-dot">🎓</div></div>
+              <div class="tl-body">
+                <h4>Преподавай и помогай ученикам</h4>
+                <p>Веди занятия по своему направлению, отвечай на вопросы, наблюдай за прогрессом учеников — это бесценный педагогический опыт.</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-marker"><div class="tl-dot">💼</div></div>
+              <div class="tl-body">
+                <h4>Реальный опыт для резюме</h4>
+                <p>Навыки преподавания, работа с аудиторией, создание учебных материалов — всё это ценится в любой карьере и профессии.</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-marker"><div class="tl-dot">🌍</div></div>
+              <div class="tl-body">
+                <h4>Международное комьюнити</h4>
+                <p>Работай вместе с волонтёрами из разных городов и стран. Расширяй кругозор и заводи полезные знакомства.</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-marker"><div class="tl-dot">🏆</div></div>
+              <div class="tl-body">
+                <h4>Официальный Volunteer Certificate</h4>
+                <p>После <strong>15 часов</strong> волонтёрства ты получаешь официальный сертификат волонтёра FSA с подписью руководства.</p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-marker"><div class="tl-dot">📄</div></div>
+              <div class="tl-body">
+                <h4>Recommendation Letter</h4>
+                <p>После <strong>15 часов</strong> активного волонтёрства ты получаешь официальное рекомендательное письмо — весомый плюс при поступлении в университет.</p>
+                <span class="tl-badge">После 15 часов волонтёрства</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Info card -->
+          <div data-aos="fade-left" data-aos-delay="200">
+            <div class="vol-card">
+              <div class="vc-head">
+                <div class="vc-avatars">
+                  <div class="vc-av">👨‍💻</div>
+                  <div class="vc-av">👩‍🏫</div>
+                  <div class="vc-av">🧑‍🔬</div>
+                  <div class="vc-av vc-av-more">+</div>
+                </div>
+                <span class="vc-badge">Набор открыт</span>
+              </div>
+
+              <h3>Присоединяйся к команде волонтёров FSA</h3>
+              <p>Стань частью проекта, который меняет жизни школьников каждый день. Вместе мы делаем знания доступными.</p>
+
+              <div class="vc-perks">
+                <div class="vc-perk">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                  Официальный Volunteer Certificate
+                </div>
+                <div class="vc-perk">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                  Recommendation Letter после 15 часов
+                </div>
+                <div class="vc-perk">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                  Реальный опыт преподавания
+                </div>
+                <div class="vc-perk">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                  Дружная международная команда
+                </div>
+              </div>
+
+              <a href="#contact" class="btn btn-primary btn-full btn-lg">Стать волонтёром</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ PARTNERS ═══ -->
+    <section id="partners" class="partners section" aria-label="Партнёры">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="s-tag">Партнёры</span>
+          <h2 class="s-title">Наши <span class="gt">Партнёры</span></h2>
+          <p class="s-sub">Организации, которые разделяют нашу миссию и поддерживают проект</p>
+        </div>
+
+        <div class="partners-row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="partner-card">
+            <div class="partner-logo">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="partner-name">Моя Школа</div>
+            <div class="partner-sub">Образовательный партнёр FSA</div>
+            <span class="p-tag">Образование</span>
+          </div>
+
+          <div class="partner-card feat">
+            <div class="partner-logo">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="partner-name">QazVolunteer</div>
+            <div class="partner-sub">Ведущая волонтёрская платформа Казахстана</div>
+            <span class="p-tag p-tag-blue">Волонтёрство</span>
+          </div>
+
+        </div>
+
+        <div class="partners-cta" data-aos="fade-up" data-aos-delay="200">
+          <span>Хочешь стать партнёром FSA?</span>
+          <a href="#contact" class="btn btn-outline btn-sm">Написать нам</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ CERTIFICATES ═══ -->
+    <section id="certificates" class="certificates section" aria-label="Сертификаты">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="s-tag">Документы</span>
+          <h2 class="s-title">Наши <span class="gt">Сертификаты</span></h2>
+          <p class="s-sub">Официальные документы, подтверждающие твои достижения в FSA</p>
+        </div>
+
+        <div class="certs-grid">
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="cert-mockup cm-s">
+              <div class="cm-header">
+                <span class="cm-fsa">FSA</span>
+                <span class="cm-type">Certificate</span>
+              </div>
+              <div class="cm-body">
+                <div class="cm-seal">🎓</div>
+                <p class="cm-issued">This certifies that</p>
+                <div class="cm-line"></div>
+                <p class="cm-for">has successfully completed</p>
+                <p class="cm-name">Future Skills Academy Program</p>
+                <p class="cm-stars">★ ★ ★ ★ ★</p>
+              </div>
+              <div class="cm-foot">
+                <div class="cm-signline"></div>
+                <span>FSA Director</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3>Student Certificate</h3>
+              <p>Выдаётся каждому ученику после успешного завершения курса FSA.</p>
+              <ul class="cert-feats">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Официальный документ</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Для резюме и портфолио</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Подпись руководства</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="130">
+            <div class="cert-mockup cm-v">
+              <div class="cm-header">
+                <span class="cm-fsa">FSA</span>
+                <span class="cm-type">Volunteer Certificate</span>
+              </div>
+              <div class="cm-body">
+                <div class="cm-seal">🙌</div>
+                <p class="cm-issued">This certifies that</p>
+                <div class="cm-line"></div>
+                <p class="cm-for">has volunteered as</p>
+                <p class="cm-name">FSA Educator &amp; Mentor</p>
+                <p class="cm-stars">★ ★ ★ ★ ★</p>
+              </div>
+              <div class="cm-foot">
+                <div class="cm-signline"></div>
+                <span>FSA Director</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3>Volunteer Certificate</h3>
+              <p>Выдаётся каждому волонтёру FSA сразу после вступления в команду.</p>
+              <ul class="cert-feats">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Официальный сертификат</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Признание вклада</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Добавляй в LinkedIn</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cert-card" data-aos="fade-up" data-aos-delay="260">
+            <div class="cert-mockup cm-r">
+              <div class="cm-header">
+                <span class="cm-fsa">FSA</span>
+                <span class="cm-type">Recommendation</span>
+              </div>
+              <div class="cm-body">
+                <div class="cm-seal">📄</div>
+                <p class="cm-issued">Letter of Recommendation</p>
+                <div class="cm-line"></div>
+                <p style="font-size:0.67rem;color:#5a6070;text-align:left;padding:0 8px;line-height:1.55;">
+                  It is our pleasure to recommend this individual as an outstanding volunteer educator who has contributed <strong style="color:#7AB5F5;">15+ hours</strong> of dedicated service to Future Skills Academy...
+                </p>
+              </div>
+              <div class="cm-foot">
+                <div class="cm-signline"></div>
+                <span>FSA Director</span>
+              </div>
+            </div>
+            <div class="cert-info">
+              <h3>Recommendation Letter</h3>
+              <p>Выдаётся волонтёрам после <strong>15+ часов</strong> активной деятельности в FSA.</p>
+              <ul class="cert-feats">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> После 15 часов работы</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Для поступления в ВУЗ</li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg> Официальная подпись</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ CONTACT ═══ -->
+    <section id="contact" class="contact section" aria-label="Контакты">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="s-tag">Контакты</span>
+          <h2 class="s-title">Свяжись с <span class="gt">нами</span></h2>
+          <p class="s-sub">Есть вопросы? Хочешь записаться? Пиши — ответим быстро</p>
+        </div>
+
+        <div class="social-links-centered" data-aos="fade-up" data-aos-delay="100">
+
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="soc-link soc-ig" aria-label="Instagram FSA">
+            <div class="soc-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <div class="soc-info">
+              <span class="soc-name">Instagram</span>
+              <span class="soc-handle">@future_skills_academy</span>
+            </div>
+            <svg class="soc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="soc-link soc-tg" aria-label="Telegram FSA">
+            <div class="soc-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3L3 10.5l7 1L12 18l3-4.5L21 3z"/><path d="M10 11.5l8-5.5"/></svg>
+            </div>
+            <div class="soc-info">
+              <span class="soc-name">Telegram</span>
+              <span class="soc-handle">@fsa_channel</span>
+            </div>
+            <svg class="soc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <a href="mailto:info@futureskillsacademy.edu" class="soc-link soc-mail" aria-label="Email FSA">
+            <div class="soc-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="soc-info">
+              <span class="soc-name">Email</span>
+              <span class="soc-handle">info@futureskillsacademy.edu</span>
+            </div>
+            <svg class="soc-arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo" aria-label="FSA — главная">
+            <div class="logo-box">
+              <img src="logo.png" alt="FSA"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+              <div class="logo-box-fallback">FSA</div>
+            </div>
+            <span>Future Skills Academy</span>
+          </a>
+          <p class="footer-tagline">Волонтёрский образовательный проект для школьников и студентов. Современные навыки — каждому.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="fsoc" aria-label="Telegram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3L3 10.5l7 1L12 18l3-4.5L21 3z"/><path d="M10 11.5l8-5.5"/></svg>
+            </a>
+            <a href="mailto:info@futureskillsacademy.edu" class="fsoc" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Навигация футера 1">
+          <h4>Навигация</h4>
+          <ul role="list">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#courses">Курсы</a></li>
+            <li><a href="#students">Ученикам</a></li>
+            <li><a href="#volunteers">Волонтёрам</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-label="Навигация футера 2">
+          <h4>Ещё</h4>
+          <ul role="list">
+            <li><a href="#partners">Партнёры</a></li>
+            <li><a href="#certificates">Сертификаты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-cta">
+          <h4>Присоединиться</h4>
+          <a href="#students"   class="btn btn-primary  btn-sm f-btn">Стать учеником</a>
+          <a href="#volunteers" class="btn btn-outline btn-sm f-btn">Стать волонтёром</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Future Skills Academy (FSA). Все права защищены.</p>
+        <p>Создан с ❤️ командой волонтёров FSA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
